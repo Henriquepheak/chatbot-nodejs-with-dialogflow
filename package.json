@@ -1,0 +1,36 @@
+{
+  "name": "chat-bot",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "lint": "eslint . ",
+    "test": "PORT=4000 jest --testTimeout=10000 --forceExit --coverage --detectOpenHandles  --watchAll --maxWorkers=1",
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "seed": "./node_modules/.bin/sequelize db:seed ",
+    "migrate": "./node_modules/.bin/sequelize db:migrate ",
+    "migrate-reset": "./node_modules/.bin/sequelize db:migrate:undo:all "
+  },
+  "dependencies": {
+    "@bottender/dialogflow": "^1.5.5",
+    "@bottender/express": "^1.5.1",
+    "@google-cloud/dialogflow": "^4.6.0",
+    "actions-on-google": "^3.0.0",
+    "body-parser": "^1.19.1",
+    "bottender": "1.5.5",
+    "express": "^4.17.2",
+    "moment": "^2.29.1",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.1",
+    "supertest": "^6.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.4.7",
+    "prettier": "^2.5.1",
+    "sequelize": "^6.13.0",
+    "sequelize-cli": "^6.4.0"
+  }
+}
