@@ -76,8 +76,8 @@ Runs the test cases using [Jest](https://jestjs.io/).
 
 ## How to Contribute
 
-To contribute to this repository, please follow [Contribution Guide](contributing.md).
+To contribute to this repository, please follow [Contribution Guide](CONTRIBUTING.MD).
 
 ## Deployment
 
-Deployment is done in an automatic via GitHub Actions. Please refer to [ci-cd.md](ci-cd.md) for more details.
+Deployment is done in an automatic via GitHub Actions. Please refer to [ci-cd.md](CI-CD.MD) for more details.
