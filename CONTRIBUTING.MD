@@ -10,7 +10,7 @@ Not all changes or new features submitted will be accepted.  Please discuss your
 
 - Fork repo on Github.
 
-- Set up your development environment (see [development.md](development.md)).
+- Set up your development environment.
 
 - Create a branch to house your changes. New branches **must** be based on the `production` branch.
 
