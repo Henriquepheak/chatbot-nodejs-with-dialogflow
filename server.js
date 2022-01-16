@@ -6,6 +6,7 @@ const {
 } = require('./src/services/dialogflow/index');
 const { newMessages } = require('./src/controllers/messages');
 const { newUser } = require('./src/controllers/user');
+const { verifyWebhookDialogflow } = require('./src/middlewares/verifyAuth');
 const messageRoute = require('./src/routes/messageRoutes');
 const userRoute = require('./src/routes/userRoutes');
 
@@ -28,12 +29,17 @@ app.prepare().then(() => {
   server.use(bodyParser.json({ verify }));
   server.use(bodyParser.urlencoded({ extended: false, verify }));
 
+  server.get('/', (req, res) => {
+    res.send('Hello World!');
+  });
+
   // your custom route
   server.use('/api/v1', messageRoute);
   server.use('/api/v1', userRoute);
 
   // route for webhook request
-  server.post('/webhook/dialogflow', (req, res) => {
+  server.post('/webhook/dialogflow', (req, res, next) => {
+    verifyWebhookDialogflow(req, res, next);
     WebhookDialogflow(req, res);
   });
 

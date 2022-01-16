@@ -1,5 +1,5 @@
 const moment = require('moment');
-const { getUser, updateUser } = require('../../controllers/user');
+const { updateUser } = require('../../controllers/user');
 
 const UserBorn = async (request, response) => {
   const tag = request.body.queryResult.intent.displayName;
@@ -21,10 +21,6 @@ const UserBorn = async (request, response) => {
       await updateUser({
         facebookId: userId,
         bornAt,
-      });
-
-      const user = await getUser({
-        facebookId: userId,
       });
 
       // console.log(user);
