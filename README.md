@@ -1,24 +1,41 @@
-This project was bootstrapped with
-[Bottender](https://github.com/Yoctol/bottender) init script.
+# Chatbot for Facebook Messager with NodeJS and Dialogflow
 
-## Sending Feedback
-
+## Description
 Always feel free to open an issue to
 [Bottender](https://github.com/Yoctol/bottender/issues) repository.
 
+## Table of Contents (Optional)
+
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+
+## Installation
+
+```sh
+npm install
+```
+
 ## Configuration
+
+- Create .env file
+- Create [Dialogflow Project](https://dialogflow.cloud.google.com/) on Google Cloud and connect to service account
+- Create Facebook App
+- Configure ENV value
+- Migrate database
+
+### Migration Database
+
+You can migrate database with
+```
+npm run migrate
+```
 
 ### The `bottender.config.js` File
 
 Bottender configuration file. You can use this file to provide settings for the session store and channels.
 
-### The `.env` File
-
-Bottender utilizes the [dotenv](https://www.npmjs.com/package/dotenv) package to load your environment variables when developing your app.
-
-To make the bot work, you must put required environment variables into your `.env` file.
-
-## Available Scripts
+## Usage
 
 In the project directory, you can run:
 
@@ -55,8 +72,12 @@ Runs the linter rules using [Eslint](https://eslint.org/).
 
 Runs the test cases using [Jest](https://jestjs.io/).
 
-## Learn More
+---
 
-To learn Bottender, check out the [Bottender documentation](https://bottender.js.org/docs/en/getting-started).
+## How to Contribute
 
-For more examples, see [Bottender examples](https://github.com/Yoctol/bottender/tree/master/examples).
+To contribute to this repository, please follow [Contribution Guide](contributing.md).
+
+## Deployment
+
+Deployment is done in an automatic via GitHub Actions. Please refer to [ci-cd.md](ci-cd.md) for more details.
